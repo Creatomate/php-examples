@@ -1,0 +1,14 @@
+{
+    "name": "php-examples/audio",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "creatomate/creatomate": "*"
+    },
+    "authors": [
+        {
+            "name": "Creatomate",
+            "email": "support@creatomate.com"
+        }
+    ]
+}

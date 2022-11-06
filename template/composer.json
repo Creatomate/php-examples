@@ -1,0 +1,14 @@
+{
+    "name": "php-examples/template",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "creatomate/creatomate": "*"
+    },
+    "authors": [
+        {
+            "name": "Creatomate",
+            "email": "support@creatomate.com"
+        }
+    ]
+}

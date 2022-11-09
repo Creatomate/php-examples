@@ -10,32 +10,38 @@ $apiKey = $argv[1];
 $client = new Creatomate\Client($apiKey);
 
 $source = new Creatomate\Source([
-  'output_format' =>  'mp4',
-  'emoji_style' =>  'apple', // Choose between 'facebook', 'google', 'twitter' and 'apple'
+  'output_format' => 'mp4',
+  'frame_rate' => 60,
+  'emoji_style' => 'apple', // Choose between 'facebook', 'google', 'twitter' and 'apple'
 
-  'elements' =>  [
+  'elements' => [
 
     new Creatomate\Elements\Video([
-      'source' =>  'https://creatomate-static.s3.amazonaws.com/demo/video4.mp4',
+      'source' => 'https://creatomate-static.s3.amazonaws.com/demo/video4.mp4',
     ]),
 
     new Creatomate\Elements\Text([
-      'text' =>  'This text adjusts automatically to the resolution of the video. 🎉',
-      'y' =>  '86%',
-      'width' =>  '92%',
-      'height' =>  '16%',
-      'fill_color' =>  '#000',
-      'font_family' =>  'Dosis',
-      'font_weight' =>  '600',
-      'font_sizeminimum' =>  '4.8 vmin',
-      'x_alignment' =>  '50%',
-      'y_alignment' =>  '50%',
-      'background_color' => '#fff',
-      'background_border_radius' => '20%',
+      'text' => 'This text adjusts automatically to the size of the video. 🔥',
+      'y' => '75%',
+      'width' => '100%',
+      'height' => '50%',
+      'x_padding' => '5 vw',
+      'y_padding' => '5 vh',
+      'y_alignment' => '100%',
+      'font_family' => 'Open Sans',
+      'font_weight' => 700,
+      'font_size_maximum' => '10.4 vmin',
+      'background_color' => 'rgba(255,255,255,0.69)',
+      'background_x_padding' => '23%',
+      'background_y_padding' => '8%',
       'background_align_threshold' => '0%',
-      'enter' =>  new Creatomate\Animations\TextTypewriter([
-        'duration' =>  3,
-        'easing' =>  'quadratic-out',
+      'fill_color' => '#333333',
+      'enter' => new Creatomate\Animations\TextSlide([
+        'duration' => '2 s',
+        'easing' => 'quadratic-out',
+        'split' => 'line',
+        'scope' => 'element',
+        'background_effect' => 'scaling-clip'
       ]),
     ]),
 
